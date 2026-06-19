@@ -16,6 +16,7 @@ env:
 jobs:
   format:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,20 +28,24 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install fix-busted-json
+
       - name: Run format script
         run: python .github/scripts/format_json.py
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.email ${GitHubMail}
-          git config --global user.name ${GitHubName}
-          git config --global color.ui true
-          git config --global credential.helper store
-          echo "https://${GitHubName}:${GitHubToken}@github.com" > ~/.git-credentials
+          git config --global user.email "${GitHubMail}"
+          git config --global user.name "${GitHubName}"
+
           git add device/ source/
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "official_devices: Reformat JSON files [skip ci]"
-            git push origin ${{ github.ref_name }}
+            git push origin HEAD:${{ github.ref_name }}
           fi
