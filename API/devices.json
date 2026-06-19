@@ -181,7 +181,11 @@
             "active": true,
             "codename": "lisaa",
             "codename_alt": "lisaa",
+            "donate_link": "https://thundergod-thor.github.io/Donation/",
             "frame": null,
+            "github_username": "NINJAHUNTER1357",
+            "telegram_username": "Thundergod_thor",
+            "image_url": "https://m.media-amazon.com/images/I/71JPbL+lnXL._SL1500_.jpg",
             "maintainer_name": "Thundergod",
             "model": "Realme GT Neo 3",
             "vendor": "Realme"
