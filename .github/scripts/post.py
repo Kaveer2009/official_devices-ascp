@@ -47,8 +47,6 @@ def getASCPVersion():
         print(f"Error fetching version: {e}")
         return "5.4"
 
-ASCP_VERSION_CHECK = max(device["version"] for device in get_devices())
-
 # Init bot
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="HTML")
 telegraph = TelegraphHelper(
@@ -248,6 +246,8 @@ def get_devices():
                         "version": data['version']
                     })
     return devices
+
+ASCP_VERSION_CHECK = max(device["version"] for device in get_devices())
 
 # Prepare log format for private group
 def tg_log():
