@@ -96,7 +96,9 @@
             "frame": null,
             "maintainer_name": "mysellysenpai",
             "model": "Nothing Phone 1",
-            "vendor": "Nothing"
+            "vendor": "Nothing",
+            "telegram_username": "mysellysenpai",
+            "github_username": "MySelly"
         },
         {
             "active": true,
