@@ -4,3 +4,4 @@ __pycache__/
 .github/scripts/__pycache__/
 commit_mesg.txt
 assets/*_banner.png
+*.bak
