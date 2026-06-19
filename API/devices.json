@@ -69,16 +69,16 @@
             "vendor": "Xiaomi"
         },
         {
-           "codename": "redwood",
-           "codename_alt": "redwoodin",
-           "vendor": "Xiaomi",
-           "model": "Poco X5 Pro",
-           "maintainer_name": "BlueHeart016",
-           "telegram_username": "BlueHeart016",
-           "github_username": "BlueHeart01",
-           "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x5-pro-5g.jpg",
-           "frame": null,
-           "active": true
+            "active": true,
+            "codename": "redwood",
+            "codename_alt": "redwoodin",
+            "frame": null,
+            "github_username": "BlueHeart01",
+            "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x5-pro-5g.jpg",
+            "maintainer_name": "BlueHeart016",
+            "model": "Poco X5 Pro",
+            "telegram_username": "BlueHeart016",
+            "vendor": "Xiaomi"
         },
         {
             "active": true,
@@ -103,10 +103,10 @@
             "codename": "garnet",
             "codename_alt": "garnet",
             "frame": null,
-            "maintainer_name": "HEYDR",
             "github_username": "zylhdrXP",
-            "telegram_username": "ZylhdrXP",
+            "maintainer_name": "HEYDR",
             "model": "Redmi Note 13 Pro 5G / POCO X6 5G",
+            "telegram_username": "ZylhdrXP",
             "vendor": "Xiaomi"
         },
         {
@@ -114,10 +114,10 @@
             "codename": "avicii",
             "codename_alt": "avicii",
             "frame": null,
-            "maintainer_name": "Kaveer",
             "github_username": "Kaveer2009",
-            "telegram_username": "KaveerRana",
+            "maintainer_name": "Kaveer",
             "model": "OnePlus Nord",
+            "telegram_username": "KaveerRana",
             "vendor": "OnePlus"
         },
         {
@@ -184,10 +184,10 @@
             "donate_link": "https://thundergod-thor.github.io/Donation/",
             "frame": null,
             "github_username": "NINJAHUNTER1357",
-            "telegram_username": "Thundergod_thor",
             "image_url": "https://m.media-amazon.com/images/I/71JPbL+lnXL._SL1500_.jpg",
             "maintainer_name": "Thundergod",
             "model": "Realme GT Neo 3",
+            "telegram_username": "Thundergod_thor",
             "vendor": "Realme"
         },
         {
