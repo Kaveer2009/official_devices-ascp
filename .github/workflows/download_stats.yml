@@ -33,10 +33,10 @@ jobs:
 
       - name: Check for changes
         run: |
-          echo "Content of API/download_stats.json after script run:"
-          cat API/download_stats.json
+          echo "Content of source/download_stats.json after script run:"
+          cat source/download_stats.json
           git status
-          git diff API/download_stats.json
+          git diff source/download_stats.json
 
       - name: Commit and push changes
         run: |
@@ -45,7 +45,7 @@ jobs:
           git config --global color.ui true
           git config --global credential.helper store
           echo "https://${GitHubName}:${GitHubToken}@github.com" > ~/.git-credentials
-          git add API/download_stats.json
+          git add source/download_stats.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

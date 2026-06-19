@@ -17,5 +17,5 @@ Go to your repo `settings > secrets > new repository secret`, and add these secr
 
 ### 2. Running the bot
 
-- Actions will automatically run if any changes are committed to `API/updater/*.json`.
+- Actions will automatically run if any changes are committed to `device/**/updater/full.json`.
 - You can also run the bot by going to `actions > ASCP Poster Bot > workflow-dispatch`.

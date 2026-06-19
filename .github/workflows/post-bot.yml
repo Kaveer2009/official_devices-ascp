@@ -3,7 +3,8 @@ name: ASCP Poster Bot
 on:
   push:
     paths:
-      - "API/updater/*.json"
+      - "device/**/updater/full.json"
+      - "device/**/updater/incremental.json"
   workflow_dispatch:
 
 env:

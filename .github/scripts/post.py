@@ -56,11 +56,17 @@ telegraph = TelegraphHelper(
 )
 
 # File directories
-jsonDir = {
-    "Official": "API/updater"
-} 
+deviceDir = "device"
 idDir = ".github/scripts"
-devices_file = "API/devices.json"
+devices_file = "device/devices.json"
+
+def get_device_codenames():
+    codenames = []
+    if os.path.exists(deviceDir):
+        for name in os.listdir(deviceDir):
+            if os.path.isdir(os.path.join(deviceDir, name)):
+                codenames.append(name)
+    return codenames
 
 # Load devices info
 def load_devices_info():
@@ -85,18 +91,16 @@ def update(IDs):
 
 # Return IDs of all latest files from json files
 def get_new_id():
-    files = []
     file_id = []
-    for type, dirName in jsonDir.items():
-        if not os.path.exists(dirName):
-            continue
-        for all in os.listdir(dirName):
-            if all.endswith('.json'):
-                files.append({"type": type, "dir": dirName, "file": all})
-    for all_files in files:
-        with open(f"{all_files['dir']}/{all_files['file']}", "r") as file:
-            data = json.loads(file.read())['response'][0]
-            file_id.append(data['md5'])
+    for codename in get_device_codenames():
+        full_json_path = os.path.join(deviceDir, codename, "updater", "full.json")
+        if os.path.exists(full_json_path):
+            with open(full_json_path, "r", encoding="utf-8") as file:
+                try:
+                    data = json.loads(file.read())['response'][0]
+                    file_id.append(data['md5'])
+                except (IndexError, KeyError, json.JSONDecodeError):
+                    continue
     return file_id
 
 # Return previous IDs
@@ -117,40 +121,36 @@ def get_diff(new_id, old_id):
 
 # Grab needed info using ID of the file
 def get_info(ID):
-    files = []
-    found = False
-    for type, dirName in jsonDir.items():
-        if not os.path.exists(dirName):
-            continue
-        for all in os.listdir(dirName):
-            if all.endswith('.json'):
-                files.append({"type": type, "dir": dirName, "file": all})
-    for all_files in files:
-        with open(f"{all_files['dir']}/{all_files['file']}", "r") as file:
-            data = json.loads(file.read())['response'][0]
-            if data['md5'] == ID:
-                device_json = all_files['file']
-                build_type = all_files['type']
-                codename = device_json.split('.')[0]
-                found = True
-                break
+    found_codename = None
+    for codename in get_device_codenames():
+        full_json_path = os.path.join(deviceDir, codename, "updater", "full.json")
+        if os.path.exists(full_json_path):
+            with open(full_json_path, "r", encoding="utf-8") as file:
+                try:
+                    data = json.loads(file.read())['response'][0]
+                    if data['md5'] == ID:
+                        found_codename = codename
+                        break
+                except (IndexError, KeyError, json.JSONDecodeError):
+                    continue
     
-    if not found:
+    if not found_codename:
         return None
 
-    with open(f"{jsonDir[build_type]}/{device_json}") as f:
+    full_json_path = os.path.join(deviceDir, found_codename, "updater", "full.json")
+    with open(full_json_path, "r", encoding="utf-8") as f:
         build_info = json.loads(f.read())['response'][0]
         
-    device_info = get_device_info_from_json(codename)
+    device_info = get_device_info_from_json(found_codename)
     
     ASCP_VERSION = build_info.get('version', 'Unknown')
     OEM = device_info['vendor'] if device_info else "Unknown"
-    DEVICE_NAME = device_info['model'] if device_info else codename
-    DEVICE_CODENAME = codename
+    DEVICE_NAME = device_info['model'] if device_info else found_codename
+    DEVICE_CODENAME = found_codename
     MAINTAINER = device_info['maintainer_name'] if device_info else "Unknown"
     DATE_TIME = datetime.datetime.fromtimestamp(int(build_info['datetime']))
     DOWNLOAD_URL = build_info['url']
-    BUILD_TYPE = build_type
+    BUILD_TYPE = "Official"
     SIZE = round(int(build_info['size'])/1073741824, 2)
     MD5 = build_info['md5']
     SHA256 = build_info.get('id', 'N/A')
@@ -184,7 +184,7 @@ def message_content(information):
     msg += f"<u>Screenshots</u>: <a href='https://t.me/ascpos_marble/804?single'>Here</a>\n\n"
     msg += f"-> Maintainer: <b>{information['maintainer']}</b>\n"
     msg += f"-> ASCP Version: <code>{information['version']}</code>\n"
-    msg += f"-> Changelog: <a href='https://raw.githubusercontent.com/Pixelify-AOSP/official_devices/refs/heads/{branch}/API/updater/changelogs/{information['''codename''']}.md'>Here</a>\n"
+    msg += f"-> Changelog: <a href='https://raw.githubusercontent.com/Pixelify-AOSP/official_devices/refs/heads/{branch}/device/{information['''codename''']}/changelogs/changelog.md'>Here</a>\n"
 
     msg += f"\n#ASCP #Stable #{information['codename']} #Android16 #Official"
     return msg
@@ -230,14 +230,12 @@ def send_log(chat_id, text, button):
 # Get all the devices which are in official repo
 def get_devices():
     devices = []
-    for type, dirName in jsonDir.items():
-        if not os.path.exists(dirName):
-            continue
-        for all in os.listdir(dirName):
-            if all.endswith('.json'):
-                codename = all.split('.')[0]
-                device_info = get_device_info_from_json(codename)
-                with open(f"{dirName}/{all}", "r") as file:
+    for codename in get_device_codenames():
+        full_json_path = os.path.join(deviceDir, codename, "updater", "full.json")
+        if os.path.exists(full_json_path):
+            device_info = get_device_info_from_json(codename)
+            with open(full_json_path, "r", encoding="utf-8") as file:
+                try:
                     data = json.loads(file.read())['response'][0]
                     devices.append({
                         "device_name": device_info['model'] if device_info else data.get('device', codename),
@@ -245,6 +243,8 @@ def get_devices():
                         "maintainer": device_info['maintainer_name'] if device_info else "Unknown",
                         "version": data['version']
                     })
+                except (IndexError, KeyError, json.JSONDecodeError):
+                    continue
     return devices
 
 ASCP_VERSION_CHECK = max(device["version"] for device in get_devices())

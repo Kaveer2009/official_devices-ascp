@@ -7,8 +7,8 @@ import sys
 from datetime import datetime
 
 PROJECT_NAME = "project-ascp"
-STATS_FILE = "API/download_stats.json"
-DEVICES_JSON = "API/devices.json"
+STATS_FILE = "source/download_stats.json"
+DEVICES_JSON = "device/devices.json"
 BASE_URL = f"https://sourceforge.net/projects/{PROJECT_NAME}/files/"
 RSS_URL = f"https://sourceforge.net/projects/{PROJECT_NAME}/rss?path=/"
 PROJECT_STATS_URL = f"https://sourceforge.net/projects/{PROJECT_NAME}/stats/json"

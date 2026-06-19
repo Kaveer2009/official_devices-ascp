@@ -37,7 +37,7 @@ jobs:
           git config --global color.ui true
           git config --global credential.helper store
           echo "https://${GitHubName}:${GitHubToken}@github.com" > ~/.git-credentials
-          git add API/
+          git add device/ source/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
