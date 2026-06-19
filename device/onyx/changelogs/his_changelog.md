@@ -1,3 +1,8 @@
+# 19-June-2026
+- Inbuilt MiuiCamera(thanks to @AdarshGrewal)
+- Added some props for smoother scrolling and better response
+- Enable AOSP surfaceflinger
+
 # 02-June-2026
 - Update blobs from OS3.0.7.0.WOLMIXM
 - Fixup call volume issue on voip call
