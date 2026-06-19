@@ -229,6 +229,18 @@
             "model": "Redmi K50i",
             "telegram_username": "Itsrohan17",
             "vendor": "Xiaomi"
+        },
+        {
+            "active": true,
+            "codename": "instantnoodlep",
+            "codename_alt": "instantnoodlep",
+            "frame": null,
+            "github_username": "SonalSingh18",
+            "image_url": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-8-pro-2.jpg",
+            "maintainer_name": "Sonal Singh",
+            "model": "OnePlus 8 Pro",
+            "telegram_username": "SonalSingh18",
+            "vendor": "OnePlus"
         }
     ]
 }

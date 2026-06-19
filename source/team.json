@@ -39,6 +39,14 @@
             "role": "Maintainer",
             "tagline": "Building for the community",
             "telegram": "BlueHeart016"
+        },
+        {
+            "XDA": "",
+            "github": "SonalSingh18",
+            "name": "Sonal Singh",
+            "role": "Maintainer",
+            "tagline": "Keeping devices alive, one build at a time",
+            "telegram": "SonalSingh18"
         }
     ]
 }
