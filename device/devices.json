@@ -5,10 +5,10 @@
             "codename": "alioth",
             "codename_alt": "aliothin",
             "frame": null,
-            "maintainer_name": "zenzer0s",
-            "telegram_username": "zenzer0s",
             "github_username": "zenzer0s",
+            "maintainer_name": "zenzer0s",
             "model": "Poco F3/Mi 11X/Redmi K40",
+            "telegram_username": "zenzer0s",
             "vendor": "Xiaomi"
         },
         {
@@ -16,10 +16,10 @@
             "codename": "marble",
             "codename_alt": "marble/marblein",
             "frame": null,
-            "maintainer_name": "Ashwani",
-            "telegram_username": "being_ashwani",
             "github_username": "beingashwani",
+            "maintainer_name": "Ashwani",
             "model": "Poco F5/Redmi Note 12 Turbo",
+            "telegram_username": "being_ashwani",
             "vendor": "Xiaomi"
         },
         {
@@ -27,10 +27,10 @@
             "codename": "peridot",
             "codename_alt": "peridot",
             "frame": null,
-            "maintainer_name": "kenway214",
-            "telegram_username": "ph12nex",
             "github_username": "kenway214",
+            "maintainer_name": "kenway214",
             "model": "Redmi Turbo 3 / POCO F6",
+            "telegram_username": "ph12nex",
             "vendor": "Xiaomi"
         },
         {
@@ -47,11 +47,11 @@
             "codename": "Tetris",
             "codename_alt": "Tetris",
             "frame": null,
+            "github_username": "maxxcodebug",
             "image_url": "https://fdn2.gsmarena.com/vv/bigpic/nothing-cmf-phone-1-ofic.jpg",
             "maintainer_name": "Anshuman X",
             "model": "Nothing CMF Phone 1",
             "telegram_username": "AnshumanAhirwar",
-            "github_username": "maxxcodebug",
             "vendor": "Nothing"
         },
         {
@@ -134,10 +134,10 @@
             "codename": "raphael",
             "codename_alt": "raphael",
             "frame": null,
-            "maintainer_name": "bulla03x",
-            "telegram_username": "Bulla03x",
             "github_username": "bulla0x",
+            "maintainer_name": "bulla03x",
             "model": "Redmi K20 Pro",
+            "telegram_username": "Bulla03x",
             "vendor": "Xiaomi"
         },
         {
