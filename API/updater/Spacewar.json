@@ -1,13 +1,19 @@
 {
-    "response": [
+  "response": [
+    {
+      "datetime": 1781862188,
+      "filename": "ASCP-v5.5-Spacewar-OFFICIAL-20260619-0930.zip",
+      "url": "https://sourceforge.net/projects/project-ascp/files/Spacewar/ASCP-v5.5-Spacewar-OFFICIAL-20260619-0930.zip",
+      "md5": "527dc81bfe65dbbcf08a96fc26987eb4",
+      "payload": [
         {
-            "datetime": "1780733947",
-            "filename": "ASCP-v5.4-Spacewar-OFFICIAL-20260606-0822.zip",
-            "id": "2549eeccba77864363522963abe8bc3e11a30bfac91efc36f765e10bbfed1bcc",
-            "md5": "20abcbdc830f8de06506eade7d0e5b08",
-            "size": 3166270860,
-            "url": "https://sourceforge.net/projects/project-ascp/files/Spacewar/ASCP-v5.4-Spacewar-OFFICIAL-20260606-0822.zip",
-            "version": "5.4"
+          "offset": 4225,
+      "FILE_HASH": "z7FOQKudauaVhePViZ1fgWFSwqqCyVDJvrQMryBvuT0=",
+      "FILE_SIZE": "3191436371",
+      "METADATA_HASH": "8i6xQp9rMxceuUu8hGbR9sAm2su0Z9kG71ImOjK8SfI=",
+      "METADATA_SIZE": "186769"
         }
-    ]
+      ]
+    }
+  ]
 }
