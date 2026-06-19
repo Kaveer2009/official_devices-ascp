@@ -94,11 +94,11 @@
             "codename": "Spacewar",
             "codename_alt": "Spacewar",
             "frame": null,
+            "github_username": "MySelly",
             "maintainer_name": "mysellysenpai",
             "model": "Nothing Phone 1",
-            "vendor": "Nothing",
             "telegram_username": "mysellysenpai",
-            "github_username": "MySelly"
+            "vendor": "Nothing"
         },
         {
             "active": true,
