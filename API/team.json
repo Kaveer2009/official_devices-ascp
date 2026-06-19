@@ -4,7 +4,7 @@
             "XDA": "https://xdaforums.com/paste_here/",
             "github": "beingashwani",
             "name": "Ashwani",
-            "role": "ASCP Co-founder; Marble Maintainer",
+            "role": "ASCP Co-founder | Marble Maintainer",
             "tagline": "No excuses!",
             "telegram": "being_ashwani"
         },
@@ -12,17 +12,9 @@
             "XDA": "https://xdaforums.com/paste_here/",
             "github": "kenway214",
             "name": "Kenway",
-            "role": "ASCP Co-founder; Peridot Maintainer",
+            "role": "ASCP Co-founder | Peridot Maintainer",
             "tagline": "Need Anything!",
             "telegram": "ph12nex"
-        },
-        {
-            "XDA": "https://www.xda-developers.com/profile/VD174775/",
-            "github": "maxxcodebug",
-            "name": "Anshuman X",
-            "role": "Maintainer",
-            "tagline": "Always ahead",
-            "telegram": "AnshumanAhirwar"
         },
         {
             "XDA": "https://xdaforums.com/m/kaveer-rana.13029173/",
@@ -31,6 +23,14 @@
             "role": "Web developer | Maintainer",
             "tagline": "Code. Build. Repeat.",
             "telegram": "KaveerRana"
+        },
+        {
+            "XDA": "https://www.xda-developers.com/profile/VD174775/",
+            "github": "maxxcodebug",
+            "name": "Anshuman X",
+            "role": "Maintainer",
+            "tagline": "Always ahead",
+            "telegram": "AnshumanAhirwar"
         }
     ]
 }
