@@ -28,7 +28,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run format script
-        run: python scripts/format_json.py
+        run: python .github/scripts/format_json.py
 
       - name: Commit and Push Changes
         run: |
