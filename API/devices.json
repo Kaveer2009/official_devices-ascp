@@ -69,17 +69,16 @@
             "vendor": "Xiaomi"
         },
         {
-            "active": true,
-            "codename": "redwood",
-            "codename_alt": "redwood",
-            "donate_link": "https://t.me/bluehearts_Builds016/55/10653?single",
-            "frame": null,
-            "github_username": "BlueHeart01",
-            "telegram_username": "BlueHeart016",
-            "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x5-pro-5g.jpg",
-            "maintainer_name": "BlueHeart016",
-            "model": "Poco X5 Pro",
-            "vendor": "Xiaomi"
+           "codename": "redwood",
+           "codename_alt": "redwoodin",
+           "vendor": "Xiaomi",
+           "model": "Poco X5 Pro",
+           "maintainer_name": "BlueHeart016",
+           "telegram_username": "BlueHeart016",
+           "github_username": "BlueHeart01",
+           "image_url": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x5-pro-5g.jpg",
+           "frame": null,
+           "active": true
         },
         {
             "active": true,
